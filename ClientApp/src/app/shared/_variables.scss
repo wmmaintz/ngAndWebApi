@@ -1,0 +1,100 @@
+/*!**************************************************************************
+ ****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name variables.scss
+ **
+ ** @description
+ ** SCSS variables to be imported into the other SCSS files
+ **
+ ****************************************************************************
+ ****************************************************************************/
+
+/**
+ ** Define color variables
+ **/
+
+$brand-primary      : #0000FF;
+$primary-color      : #0000ff;
+$error-color        : #FF0000;
+$brand-danger       : $error-color;
+$placeholder-text   : #99CCFF;
+
+$header-height: 50px;
+$footer-height: 30px;
+
+// Admin menu variables
+$admin-header-height: 50px;
+$primary-hex: #00a0ff;
+$admin-font-serif: "Times";
+$admin-font-sans-serif: "Verdana";
+$sidebar-width: 230px;
+$sidebar-color: #2a4f69;
+
+$heading-color: grey;
+$subheading-color: #222;
+$hdg-shadow-color: blue;
+
+$gradient-bg1: white;
+$gradient-bg2: silver;
+$gradient-bg3: #333333;
+
+
+ /**
+ ** Define photo dimensions
+ **/
+$photoWidth         : 240px;
+$photoHeight        : 200px;
+
+$slideWidth         : 240px;
+$slideHeight        : 200px;
+
+/**
+ ** Bootstrap column widths
+ **
+ ** col-lg : Large       - devices less than 1200px (large desktops)
+ ** col-md : Medium      - devices less than 992px (desktops)
+ ** col-sm : Small       - devices less than 768px (tablets)
+ ** col-xs : Extra Small - devices less than 350px (smartphones)
+ **
+ ** Bootstrap Screen Widths
+ **
+ ** @size_ld            : "1440px"; - Large Desktop
+ ** @size_xl            : "1200px";
+ ** @size_lg            : "1072px";
+ ** @size-ml            : "1024px"; - Normal Desktop
+ ** @size_md            : "992px";
+ ** @size_sm            : "768px"; - Tablet
+ ** @size_ss            : "425px"; - Large Mobile
+ ** @size_sx            : "375px"; - Medium Mobile
+ ** @size_xs            : "350px";
+ ** @size_xx            : "320px"; - Small Mobile
+ **
+ **/
+
+$size_ld            : "1440px";
+$size_xl            : "1200px";
+$size_lg            : "1072px";
+$size-ml            : "1024px";
+$size_md            : "992px";
+$size_sm            : "768px";
+$size_ss            : "425px";
+$size_sx            : "375px";
+$size_xs            : "350px";
+$size_xx            : "320px";
+  
+/**
+ ** Google Device Widths
+ **
+ ** LDT - 1440px - Large Desktop
+ ** NDT - 1024px - Normal Desktop
+ ** TAB -  768px - Tablet
+ ** LMB -  425px - Large Mobile
+ ** MMB -  375px - Medium Mobile
+ ** SMB -  320px - Small Mobile
+ **
+ **/
+
+/*****************************************************************************
+ ** END OF FILE - variables.scss
+ ****************************************************************************/

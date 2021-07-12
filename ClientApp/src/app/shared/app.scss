@@ -1,0 +1,78 @@
+/*!***************************************************************************
+ * FileName:  app.scss : Top-Level scss file
+ * Author:    Bill Maintz
+ *****************************************************************************/
+//
+
+// Set the default color theme
+$global-theme: 10 !default; /* (1 through 12) */
+// @debug "$global-theme: #{$global-theme}";
+
+// Import Bootstrap overrides
+@import "./variables";
+@import "./color-theme";
+@import "./customize-bootstrap";
+@import "./mixins";
+
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@sweetalert2/theme-bootstrap-4/bootstrap-4.scss";
+@import "~@sweetalert2/theme-dark/dark.scss";
+@import "~@sweetalert2/theme-bulma/bulma.scss";
+@import "~@sweetalert2/theme-minimal/minimal.scss";
+
+
+// Custom Fonts
+@import "http://fonts.googleapis.com/css?family=Montserrat:400,700";
+@import "http://fonts.googleapis.com/css?family=Kaushan+Script";
+@import "http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic";
+@import "http://fonts.googleapis.com/css?family=Droid+Sans:400,700";
+@import "http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700";
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
+
+// global styles
+a {
+  cursor: pointer;
+}
+
+.admin-nav {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: $body-bg;
+  border-bottom: 1px solid $text_muted;
+}
+
+.btn-delete-account {
+  width: 40px;
+  text-align: center;
+  box-sizing: content-box;
+}
+
+section {
+  width: 100vw;
+  height: 100%;
+  overflow-x: auto;
+  font-size: 14pt;
+
+  .section-heading {
+    top: 70px;
+    font-size: larger;
+    margin-bottom: 0px;
+    color: $heading-color;
+    box-shadow: $hdg-shadow-color;
+  }
+
+  .section-subheading {
+    font-size: large;
+    color: $subheading-color;
+    margin-bottom: 20px;
+  }
+}
+
+.container,
+.container-fluid {
+  border: none;
+  margin: 0;
+}
+
+/** EOF **********************************************************************/

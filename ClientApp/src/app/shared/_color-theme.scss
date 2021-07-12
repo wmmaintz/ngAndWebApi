@@ -1,0 +1,310 @@
+/*!**************************************************************************
+ ****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name _color-theme.scss
+ **
+ ** @description
+ ** SCSS variables that determine the colors of page elements
+ **
+ ****************************************************************************
+ ****************************************************************************/
+
+/**
+ ** Define color variables
+ **/
+
+// @debug "$global-theme: #{$global-theme}";
+
+    /* These are the defaults which will be overriden by
+    * the values selected by the theme-color variable below.
+    */
+    $body-bg        : #ffffff;
+    $body-bg1       : #ffffff;
+    $body-bg2       : #0000ff;
+    $body-bg3       : #000000;
+    $body-color     : #000000;
+    $body-color1    : #000000;
+    $body-color2    : #00ffff;
+    $body-color3    : #ffffff;
+    $body-color4    : #0000ff;
+    $body-color5    : #00ff00;
+    $body-color6    : #ffff00;
+    $text_muted     : #999999;
+    $hyperlink_fg   : #0000ff;
+    $hyperlink_fgv  : #ff0080;
+    $primary_btn_bg : #0000ff;
+    $primary_btn_fg : #ffffff;
+
+$theme-colors: (
+    /*
+    * Default theme colors
+    */
+    "body-bg"        : $body-bg,
+    "body-bg1"       : $body-bg1,
+    "body-bg2"       : $body-bg2,
+    "body-bg3"       : $body-bg3,
+    "body-color"     : $body-color,
+    "body-color1"    : $body-color1,
+    "body-color2"    : $body-color2,
+    "body-color3"    : $body-color3,
+    "body-color4"    : $body-color4,
+    "body-color5"    : $body-color5,
+    "body-color6"    : $body-color6,
+    "text_muted"     : $text_muted,
+    "hyperlink_fg"   : $hyperlink_fg,
+    "hyperlink_fgv"  : $hyperlink_fgv,
+    "primary_btn_bg" : $primary_btn_bg,
+    "primary_btn_fg" : $primary_btn_fg,
+);
+ 
+ 
+/*****************************************************************************
+ * Define the various color themes
+ *****************************************************************************/
+ 
+// $global-theme       : 1 ; /* (1 through 12) - set in _variables.scss */
+ 
+/* Color Theme for January - New Year's Day */
+@if $global-theme == 1 {
+    $theme-colors: (      
+        "body-bg"       : #ffffff,  /* background */
+        "body-color"    : #000000,  /* text color */
+
+        "body-bg1"      : #ffffff,  /* light */
+        "body-bg2"      : #c0c0c0,  /* medium */
+        "body-bg3"      : #180486,  /* dark */
+        "body-color1"   : #555555,  /* medium */
+        "body-color2"   : #000000,  /* dark */
+        "body-color3"   : #c0c0c8,  /* light */
+        "text_muted"    : #999999,  /* light text1 */
+        "hyperlink_fg"  : #0000ff,  /* hyperlink */
+        "hyperlink_fgv" : #ff0080,  /* hyperlink */
+        "primary_btn_bg": #0000ff,  /* dark */
+        "primary_btn_fg": #ffffff,  /* light text */
+    );
+}
+
+/* Color Theme for February - Valentine's Day */
+@if $global-theme == 2 {  
+    $theme-colors: (      
+        "body-bg"       : #ffffff,  /* background */
+        "body-color"    : #000000,  /* text color */
+
+        "body-bg1"      : #ff8080,  /* light */
+        "body-bg2"      : #ff5ac0,  /* medium */
+        "body-bg3"      : #ff0000,  /* dark */
+        "body-color1"   : #791c1c,  /* medium */
+        "body-color2"   : #200808,  /* dark */
+        "body-color3"   : #ffffff,  /* light */
+        "text_muted"    : #7a7468,  /* light text1 */
+        "hyperlink_fg"  : #0000ff,  /* hyperlink */
+        "hyperlink_fgv" : #ff0080,  /* hyperlink */
+        "primary_btn_bg": #ff00ea,  /* dark */
+        "primary_btn_fg": #000000,  /* light text */
+    );
+}
+
+/* Color Theme for March - St. Patrick's Day */
+@if $global-theme == 3 {
+    $theme-colors: (      
+        "body-bg"       : #ffffff,  /* background */
+        "body-color"    : #000000,  /* text color */
+
+        "body-bg1"      : #c3e4bd,  /* light */
+        "body-bg2"      : #b7eba8,  /* medium */
+        "body-bg3"      : #119e04,  /* dark */
+        "body-color1"   : #3b4b39,  /* medium */
+        "body-color2"   : #062500,  /* dark */
+        "body-color3"   : #0070C6,  /* light */
+        "text_muted"    : #343a32,  /* light text1 */
+        "hyperlink_fg"  : #0000ff,  /* hyperlink */
+        "hyperlink_fgv" : #ff0080,  /* hyperlink */
+        "primary_btn_bg": #0000ff,  /* dark */
+        "primary_btn_fg": #ffffff,  /* light text */
+    );
+}
+    
+/* Color Theme for April - Easter */
+@if $global-theme == 4 {
+    $theme-colors: (      
+        "body-bg"       : #ffffff,  /* background */
+        "body-color"    : #000000,  /* text color */
+
+        "body-bg1"      : #00CCFF,  /* light */
+        "body-bg2"      : #0070C6,  /* medium */
+        "body-bg3"      : #8855ee,  /* dark */
+        "body-color1"   : #020483,  /* medium */
+        "body-color2"   : #000000,  /* dark */
+        "body-color3"   : #000080,  /* light */
+        "text_muted"    : #000000,  /* light text1 */
+        "hyperlink_fg"  : #0000ff,  /* hyperlink */
+        "hyperlink_fgv" : #ff0080,  /* hyperlink */
+        "primary_btn_bg": #0000ff,  /* dark */
+        "primary_btn_fg": #ffffff,  /* light text */
+    );
+}
+    
+/* Color Theme for May - Cinco DeMayo */
+@if $global-theme == 5 { 
+    $theme-colors: (      
+        "body-bg"       : #ffffff,  /* background */
+        "body-color"    : #000000,  /* text color */
+
+        "body-bg1"      : #ffffff,  /* light */
+        "body-bg2"      : #a3a3a3,  /* medium */
+        "body-bg3"      : #222222,  /* dark */
+        "body-color1"   : #555555,  /* medium */
+        "body-color2"   : #000000,  /* dark */
+        "body-color3"   : #c0c0c8,  /* light */
+        "text_muted"    : #999999,  /* light text1 */
+        "hyperlink_fg"  : #0000ff,  /* hyperlink */
+        "hyperlink_fgv" : #ff0080,  /* hyperlink */
+        "primary_btn_bg": #0000ff,  /* dark */
+        "primary_btn_fg": #ffffff,  /* light text */
+    );
+}
+    
+/* Color Theme for June - Flag Day */
+@if $global-theme == 6 { 
+    $theme-colors: (      
+        "body-bg"       : #ffffff,  /* background */
+        "body-color"    : #000000,  /* text color */
+
+        "body-bg1"      : #ffffff,  /* light */
+        "body-bg2"      : #a3a3a3,  /* medium */
+        "body-bg3"      : #222222,  /* dark */
+        "body-color1"   : #555555,  /* medium */
+        "body-color2"   : #000000,  /* dark */
+        "body-color3"   : #c0c0c8,  /* light */
+        "text_muted"    : #999999,  /* light text1 */
+        "hyperlink_fg"  : #0000ff,  /* hyperlink */
+        "hyperlink_fgv" : #ff0080,  /* hyperlink */
+        "primary_btn_bg": #0000ff,  /* dark */
+        "primary_btn_fg": #ffffff,  /* light text */
+    );
+}
+    
+/* Color Theme for July - Independence Day */
+@if $global-theme == 7 {
+    $theme-colors: (      
+        "body-bg"       : #ffffff,  /* background */
+        "body-color"    : #000000,  /* text color */
+
+        "body-bg1"      : #c5baab,  /* light */
+        "body-bg2"      : #b39358,  /* medium */
+        "body-bg3"      : #473616,  /* dark */
+        "body-color1"   : #535353,  /* medium */
+        "body-color2"   : #000000,  /* dark */
+        "body-color3"   : #f5f5f5,  /* light */
+        "text_muted"    : #999999,  /* light text1 */
+        "hyperlink_fg"  : #0000ff,  /* hyperlink */
+        "hyperlink_fgv" : #ff0080,  /* hyperlink */
+        "primary_btn_bg": #0000ff,  /* dark */
+        "primary_btn_fg": #ffffff,  /* light text */
+    );
+}
+    
+/* Color Theme for August - International Beer Day */
+@if $global-theme == 8 { 
+    $theme-colors: (      
+        "body-bg"       : #ffffff,  /* background */
+        "body-color"    : #000000,  /* text color */
+
+        "body-bg1"      : #ffffff,  /* light */
+        "body-bg2"      : #a3a3a3,  /* medium */
+        "body-bg3"      : #222222,  /* dark */
+        "body-color1"   : #555555,  /* medium */
+        "body-color2"   : #000000,  /* dark */
+        "body-color3"   : #c0c0c8,  /* light */
+        "text_muted"    : #999999,  /* light text1 */
+        "hyperlink_fg"  : #0000ff,  /* hyperlink */
+        "hyperlink_fgv" : #ff0080,  /* hyperlink */
+        "primary_btn_bg": #0000ff,  /* dark */
+        "primary_btn_fg": #ffffff,  /* light text */
+    );
+}
+
+/* Color Theme for September - Labor Day */
+@if $global-theme == 9 { 
+    $theme-colors: (      
+        "body-bg"       : #ffffff,  /* background */
+        "body-color"    : #000000,  /* text color */
+
+        "body-bg1"      : #ffffff,  /* light */
+        "body-bg2"      : #a3a3a3,  /* medium */
+        "body-bg3"      : #222222,  /* dark */
+        "body-color1"   : #555555,  /* medium */
+        "body-color2"   : #000000,  /* dark */
+        "body-color3"   : #c0c0c8,  /* light */
+        "text_muted"    : #999999,  /* light text1 */
+        "hyperlink_fg"  : #0000ff,  /* hyperlink */
+        "hyperlink_fgv" : #ff0080,  /* hyperlink */
+        "primary_btn_bg": #0000ff,  /* dark */
+        "primary_btn_fg": #ffffff,  /* light text */
+    );
+}
+    
+/* Color Theme for October - Halloween */
+@if $global-theme == 10 {
+    $theme-colors: (      
+        "body-bg"       : #ffffff,  /* background */
+        "body-color"    : #000000,  /* text color */
+
+        "body-bg1"      : #ffb07b,  /* light */
+        "body-bg2"      : #fd8b3e,  /* medium */
+        "body-bg3"      : #ff6701,  /* dark */
+        "body-color1"   : #251d11,  /* medium */
+        "body-color2"   : #883701,  /* dark */
+        "body-color3"   : #f5e502,  /* light */
+        "text_muted"    : #7a7468,  /* light text1 */
+        "hyperlink_fg"  : #0000ff,  /* hyperlink */
+        "hyperlink_fgv" : #ff0080,  /* hyperlink */
+        "primary_btn_bg": #290d01,  /* dark */
+        "primary_btn_fg": #000000,  /* light text */
+    );
+}
+    
+/* Color Theme for November - Thanksgiving */
+@if $global-theme == 11 {
+    $theme-colors: (      
+        "body-bg"       : #ffffff,  /* background */
+        "body-color"    : #000000,  /* text color */
+
+        "body-bg1"      : #c5baab,  /* light */
+        "body-bg2"      : #b39358,  /* medium */
+        "body-bg3"      : #473616,  /* dark */
+        "body-color1"   : #535353,  /* medium */
+        "body-color2"   : #000000,  /* dark */
+        "body-color3"   : #f5f5f5,  /* light */
+        "text_muted"    : #999999,  /* light text1 */
+        "hyperlink_fg"  : #0000ff,  /* hyperlink */
+        "hyperlink_fgv" : #ff0080,  /* hyperlink */
+        "primary_btn_bg": #0000ff,  /* dark */
+        "primary_btn_fg": #ffffff,  /* light text */
+    );
+}
+    
+/* Color Theme for December - Christmas */
+@if $global-theme == 12 {
+    $theme-colors: (      
+        "body-bg"       : #ffffff,  /* background */
+        "body-color"    : #000000,  /* text color */
+
+        "body-bg1"      : #ffffff,  /* light */
+        "body-bg2"      : #014b26,  /* medium */
+        "body-bg3"      : #50010e,  /* dark */
+        "body-color1"   : #7e3d3d,  /* medium */
+        "body-color2"   : #0c3502,  /* dark */
+        "body-color3"   : #c0cac1,  /* light */
+        "text_muted"    : #434040,  /* light text1 */
+        "hyperlink_fg"  : #0000ff,  /* hyperlink */
+        "hyperlink_fgv" : #ff0080,  /* hyperlink */
+        "primary_btn_bg": #0000ff,  /* dark */
+        "primary_btn_fg": #ffffff,  /* light text */
+    );
+}
+
+/*****************************************************************************
+ ** END OF FILE - _color-theme.scss
+ ****************************************************************************/
