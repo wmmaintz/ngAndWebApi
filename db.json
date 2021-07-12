@@ -105,33 +105,6 @@
         ]
     },
     {
-        "id"        : 19,
-        "type"      : 2,
-        "title"     : "33 Years",
-        "filename"  : "",
-        "sdescript" : "",
-        "ldescript" : "",
-        "href"      : "img/photos/IMG_0088.JPG",
-        "videoHref" : "",
-        "thumbnail" : "img/photos/Thumbnails/TN-IMG_0088.JPG",
-        "hoffset"   : 0,
-        "voffset"   : 0,
-        "dateTaken" : "10/6/2012",
-        "dateAdded" : "03/08/2013",
-        "fileSize"      : 128,
-        "tags"      : ["Bill", "Ellen"],
-        "carousels": [
-          {
-            "id": 1,
-            "num": 1,
-            "showTnD": true,
-            "descSorL": "short",
-            "slideInterval": 0
-          }
-        ]
-    },
-    
-    {
         "id"        : 50,
         "type"      : 2,
         "title"     : "The Boys",
