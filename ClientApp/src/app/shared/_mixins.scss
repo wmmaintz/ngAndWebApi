@@ -1,0 +1,302 @@
+/*!***************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name mixins.scss
+ **
+ ** @description
+ ** Define the global mixins and reference them in other scss files
+ **
+ ****************************************************************************/
+@import 'variables';
+@import 'color-theme';
+@import 'customize-bootstrap';
+// @debug "$global-theme: #{$global-theme}";
+
+@mixin fullscreen() {
+  height: 1000%;
+  width: 1000%;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+     -moz-transform: $property;
+      -ms-transform: $property;
+       -o-transform: $property;
+          transform: $property;
+}
+
+@mixin rad-transition($timeframe) {
+  -webkit-transition: -webkit-radial-gradient $timeframe;
+     -moz-transition:    -moz-radial-gradient $timeframe;  /* Safari 3.1 to 6.0 */
+      -ms-transition:     -ms-radial-gradient $timeframe;  /* Internet Explorer */
+       -o-transition:      -o-radial-gradient $timeframe;  /* Opera */
+          transition:         radial-gradient $timeframe;
+          transition: color ($timeframe * 4);
+          transition: border-radius $timeframe;
+}
+
+@mixin lin-transition($timeframe) {
+  -webkit-transition: -webkit-radial-linear $timeframe;
+     -moz-transition:    -moz-radial-linear $timeframe;  /* Safari 3.1 to 6.0 */
+      -ms-transition:     -ms-radial-linear $timeframe;  /* Internet Explorer */
+       -o-transition:      -o-radial-linear $timeframe;  /* Opera */
+          transition:         radial-linear $timeframe;
+          transition: color ($timeframe * 4);
+          transition: border-radius $timeframe;
+}
+
+/* Define gradients
+ * Eliminate having to duplicate these same 5 lines for every gradient
+ */
+@mixin radgradient2($firstColor, $secondColor) {
+  background : -webkit-radial-gradient($firstColor, $secondColor); 
+  background :    -moz-radial-gradient($firstColor, $secondColor); 
+  background :     -ms-radial-gradient($firstColor, $secondColor); 
+  background :      -o-radial-gradient($firstColor, $secondColor); 
+  background :         radial-gradient($firstColor, $secondColor);
+}
+
+@mixin radgradient3($firstColor, $secondColor, $thirdColor) {
+  background : -webkit-radial-gradient($firstColor, $secondColor, $thirdColor); 
+  background :    -moz-radial-gradient($firstColor, $secondColor, $thirdColor); 
+  background :     -ms-radial-gradient($firstColor, $secondColor, $thirdColor); 
+  background :      -o-radial-gradient($firstColor, $secondColor, $thirdColor); 
+  background :         radial-gradient($firstColor, $secondColor, $thirdColor);
+}
+
+@mixin radgradient-trans($timeframe) {
+  @include rad-transition($timeframe);
+}
+
+@mixin lingradient2($firstColor, $secondColor) {
+  background : -webkit-linear-gradient($firstColor, $secondColor); 
+  background :    -moz-linear-gradient($firstColor, $secondColor); 
+  background :     -ms-linear-gradient($firstColor, $secondColor); 
+  background :      -o-linear-gradient($firstColor, $secondColor); 
+  background :         linear-gradient($firstColor, $secondColor);
+}
+
+@mixin lingradient3($firstColor, $secondColor, $thirdColor) {
+  background : -webkit-linear-gradient($firstColor, $secondColor, $thirdColor); 
+  background :    -moz-linear-gradient($firstColor, $secondColor, $thirdColor); 
+  background :     -ms-linear-gradient($firstColor, $secondColor, $thirdColor); 
+  background :      -o-linear-gradient($firstColor, $secondColor, $thirdColor); 
+  background :         linear-gradient($firstColor, $secondColor, $thirdColor);
+}
+
+@mixin lingradient-trans($timeframe) {
+  @include lin-transition($timeframe);  
+}
+
+@mixin ogradient3($firstColor, $secondColor, $thirdColor, $opacityLevel) {
+  $ieopacity : round($opacityLevel * 100); /* For IE8 and earlier. */
+  background : -webkit-radial-gradient($firstColor, $secondColor, $thirdColor); 
+  background :    -moz-radial-gradient($firstColor, $secondColor, $thirdColor); 
+  background :     -ms-radial-gradient($firstColor, $secondColor, $thirdColor); 
+  background :      -o-radial-gradient($firstColor, $secondColor, $thirdColor); 
+  background :         radial-gradient($firstColor, $secondColor, $thirdColor);
+  opacity    : $opacityLevel; /* The lower the value, the more transparent (0.0 - 1.0). */
+  filter     : alpha( opacity=$ieopacity ); /* For IE8 and earlier. Values from 0 - 100 */
+}
+
+/* Takes 3 arguments:
+ * Text Color, Background Color, and Border Color */
+@mixin nav-gradient-pill($textColor, $background1, $background2, $borderColor) {
+  color                  : $textColor;
+  @include radgradient2($background1, $background2);
+  border                 : 2px solid $borderColor;
+  border-radius          : 10px;
+      -webkit-transition : -webkit-radial-gradient .5s; /* Safari 3.1 to 6.0 */
+         -moz-transition :    -moz-radial-gradient .5s;
+          -ms-transition :     -ms-radial-gradient .5s; 
+           -o-transition :      -o-radial-gradient .5s;
+              transition :         radial-gradient .5s;
+              transition : color 2s;
+              transition : border-radius .5s;
+}
+
+/* Define Background Cover */
+@mixin background-cover($image) {
+  background-image: $image;
+  background-attachment   : fixed;
+  background-position     : 50 50;
+  min-height              : 100%;
+  min-width               : 100%;
+  -webkit-background-size : cover;
+     -moz-background-size : cover;
+       -o-background-size : cover;
+          background-size : cover;
+  z-index                 : 0;
+}
+
+@mixin carousel-fullscreen() {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  bottom: 30px;
+  right: 0px;
+  height: calc(100% - ($header-height + $footer-height) );;
+  width: auto;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+  }
+}
+
+@mixin fullscreen_bg() {
+  /* use this mixin to have an image cover the entire page (centered)
+   * no matter how big the image is or how small the screen is.  Use
+   * the following html:
+
+  <div id="bg_img">
+    <img src="images/bg.jpg" alt="big image">
+  </div>
+
+  */
+  position : fixed; 
+    top      : -50%; 
+    left     : -50%; 
+    width    : 200%; 
+    height   : 200%;
+
+  #bg_img {
+    position   : absolute; 
+    top        : 0; 
+    left       : 0; 
+    right      : 0; 
+    bottom     : 0; 
+    margin     : auto; 
+    min-width  : 50%;
+    min-height : 50%;
+  }
+}
+
+/* Define Dropdown Menu */
+@mixin dropdown-menu {
+  background-color : transparent;
+  list-style       : none;
+  margin-left      : 0;
+  text-align       : left;
+}
+
+/* Bootstrap Button Variant */
+@mixin button-variant($color, $background, $border) {
+  color            : $color;
+  background-color : $background;
+  border-color     : $border;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    color            : $color;
+    background-color : darken($background, 10%);
+    border-color     : darken($border, 12%);
+  }
+
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-image : none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color : $background;
+      border-color     : $border;
+    }
+  }
+
+  .badge {
+    color            : $background;
+    background-color : $color;
+  }
+}
+ 
+/* Box sizing and shadowing */
+@mixin box-size-shadow($size, $x-shadow, $y-shadow) {
+  @include box-sizing($size);
+  @include box-shadow($x-shadow, $y-shadow);
+}
+
+/* Box shadowing */
+@mixin box-shadow($x-shadow, $y-shadow) {
+  /* TODO: insert if then logic if x-shadow and y-shadow are 0,
+           then -moz-box-shadow should be none. */
+
+  -webkit-box-shadow : $x-shadow, $y-shadow;
+     -moz-box-shadow : $x-shadow, $y-shadow;
+          box-shadow : $x-shadow, $y-shadow;
+}
+
+/* Box sizing */
+@mixin box-sizing($size) {
+  -webkit-box-sizing : $size;
+     -moz-box-sizing : $size;
+      -ms-box-sizing : $size;
+       -o-box-sizing : $size;
+          box-sizing : $size;
+}
+
+/*****************************************************************************
+ * Define the various font selections
+ *****************************************************************************/
+@mixin serif-font() {
+  font-family : "Droid Serif", 
+                "Helvetica Neue", 
+                "Helvetica", 
+                "Arial", 
+                "sans-serif";
+}
+
+@mixin script-font() {
+  font-family : "Kaushan Script", 
+                "Helvetica Neue", 
+                "Helvetica", 
+                "Arial", 
+                "cursive";
+}
+
+@mixin body-font() {
+  font-family : "Roboto Slab", 
+                "Helvetica Neue", 
+                "Helvetica", 
+                "Arial", 
+                "sans-serif";
+}
+
+@mixin subheading-font() {
+  font-family    : "Droid Serif", 
+                   "Helvetica Neue", 
+                   "Helvetica", 
+                   "Arial", 
+                   "sans-serif";
+  text-transform : none;
+}
+
+@mixin heading-font() {
+  font-family    : "Montserrat",
+                   "Helvetica Neue", 
+                   "Helvetica", 
+                   "Arial", 
+                   "sans-serif";
+  text-transform : uppercase;
+}
+
+/*****************************************************************************
+ ** END OF FILE - mixins.scss
+ *****************************************************************************/
